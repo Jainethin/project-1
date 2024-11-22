@@ -5,7 +5,7 @@ import generateToken from "../utils/generateToken.js";
 export const signup = async (req , res) => {
     try{
         //get all the details typed
-        const {username, fullName , email , password} = req.body;
+        const {username,  email , password} = req.body;
 
         //validating the email 
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -32,7 +32,7 @@ export const signup = async (req , res) => {
         // creating new user
         const newUser = new User({
             username : username,
-            fullName : fullName,
+            
             email : email,
             password : hashedPassword
         })
@@ -43,7 +43,7 @@ export const signup = async (req , res) => {
             await newUser.save();
             res.status(200).json({
                 _id : newUser.id,
-                fullName : newUser.fullName,
+                
                 username : newUser.username,
                 email : newUser.email,
                 password : newUser.password,
@@ -71,7 +71,7 @@ export const login = async (req , res) => {
         generateToken(user._id,res);
         res.status(200).json({
                 _id : user.id,
-                fullName : user.fullName,
+                
                 username : user.username,
                 email : user.email,
                 password : user.password,

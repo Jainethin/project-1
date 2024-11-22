@@ -6,10 +6,7 @@ const UserSchema = mongoose.Schema({
         required : true,
         unique : true
     },
-    fullName : {
-        type : String,
-        required : true
-    },
+    
     email : {
         type : String,
         required : true,
@@ -20,44 +17,7 @@ const UserSchema = mongoose.Schema({
         required : true,
         minLength : 8
     },
-    followers : [
-        {
-            type : mongoose.Schema.Types.ObjectId,
-            ref : "User",//takes from user model
-            default : []
-        }
-    ],
-    following : [
-        {
-            type : mongoose.Schema.Types.ObjectId,
-            ref : "User",//takes from user model
-            default : []
-        }
-    ],
-    profileImg : {
-        type : String,
-        default : ""
-    },
-    coverImg : {
-        type : String,
-        default : ""
-    },
-    bio : {
-        type : String,
-        default : ""
-    },
-    link : {
-        type : String,
-        default : ""
-    },
-    likedPosts : [
-        {
-            type : mongoose.Schema.Types.ObjectId,
-            ref : "Post",
-            default : []
-        }
-
-    ]
+    
     
 
 

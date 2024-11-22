@@ -2,7 +2,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
-import cloudinary from "cloudinary";
+
 import cors from "cors"
 
 import authRoute from "./routes/auth_route.js"
@@ -16,11 +16,7 @@ const app = express();
 dotenv.config();
 const PORT = process.env.PORT;
 
-cloudinary.config({
-    cloud_name : process.env.CLOUDINARY_CLOUD_NAME,
-    api_key : process.env.CLOUDINARY_API_KEY,
-    api_secret : process.env.CLOUDINARY_API_SECRET_KEY
-});
+
 
 app.use(cors({
     origin : "http://localhost:3000",

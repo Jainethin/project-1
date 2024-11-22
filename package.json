@@ -1,5 +1,5 @@
 {
-  "name": "x-clone",
+  "name": "notes",
   "version": "1.0.0",
   "main": "backend/server.js",
   "scripts": {
@@ -13,7 +13,6 @@
   "dependencies": {
     "@tanstack/react-query": "^5.59.20",
     "bcryptjs": "^2.4.3",
-    "cloudinary": "^2.5.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
