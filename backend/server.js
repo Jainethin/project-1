@@ -7,8 +7,7 @@ import cors from "cors"
 
 import authRoute from "./routes/auth_route.js"
 import userRoute from "./routes/user_route.js"
-import postRoute from "./routes/post_route.js"
-import notifyRoute from "./routes/notify_route.js"
+
 import connectdb from "./db/connectDB.js"
 
 
@@ -40,8 +39,8 @@ app.use(cookieParser());
 
 app.use("/api/auth" , authRoute);
 app.use("/api/users", userRoute);
-app.use("/api/posts", postRoute);
-app.use("/api/notifications", notifyRoute)
+
+
 
 app.listen(PORT,()=>{
     console.log(`server running on port ${PORT}`)
